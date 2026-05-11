@@ -49,6 +49,7 @@ if settings.ENVIRONMENT == "development":
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        # "*",
         "https://intellisense.cloud",
     ],
     allow_credentials=True,
