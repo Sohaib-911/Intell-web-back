@@ -49,7 +49,7 @@ if settings.ENVIRONMENT == "development":
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://intellisense.cloud/",
+        "https://intellisense.cloud",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -78,3 +78,5 @@ async def global_exception_handler(request: Request, exc: Exception):
         status_code=500,
         content={"error": "An unexpected error occurred. Please try again later."},
     )
+
+
